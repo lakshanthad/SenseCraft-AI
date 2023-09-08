@@ -4,12 +4,11 @@
 
 ## Introduction
 
-SenseCraft AI is a powerful artificial intelligence application designed for Recomputer (Jetson) devices. It supports
-deployment on a wide range of
+SenseCraft AI is a powerful artificial intelligence application designed for Recomputer (Jetson) devices.
 It supports deployment on a wide range of Recomputer (Jetson) devices, ensuring that you have a wide choice of hardware.
 In addition to several built-in AI models, we will be providing a large number of public models on the SenseCraft AI
 platform in the future.
-You are free to download and deploy AI models for specific scenarios and create personalized AI solutions based on your
+You can to download and deploy AI models for specific scenarios and create personalized AI solutions based on your
 needs.
 Create personalized AI solutions based on your needs.
 SenseCraft AI is your intelligent decision-making partner, providing you with simple, flexible and efficient AI
