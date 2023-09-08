@@ -4,14 +4,20 @@
 
 ## Introduction
 
-SenseCraft AI is a powerful AI application designed for Recomputer (Jetson) devices. It supports deployment on a wide
-range of Recomputer (Jetson) devices, ensuring you have a wide selection of hardware.
-In addition to multiple built-in AI models, we provide a large number of public models on the SenseCraft AI platform.
-You are free to download and deploy AI models suitable for specific scenarios to create a personalized AI solution
-according to your needs.
-SenseCraft AI is your intelligent decision-making partner, providing you with easy, flexible and efficient AI reasoning
-and solution building capabilities. With our apps, you will experience the power of intelligent decision making to help
-you make informed and accurate decisions in a variety of scenarios.
+SenseCraft AI is a powerful artificial intelligence application designed for Recomputer (Jetson) devices. It supports
+deployment on a wide range of
+It supports deployment on a wide range of Recomputer (Jetson) devices, ensuring that you have a wide choice of hardware.
+In addition to several built-in AI models, we will be providing a large number of public models on the SenseCraft AI
+platform in the future.
+You are free to download and deploy AI models for specific scenarios and create personalized AI solutions based on your
+needs.
+Create personalized AI solutions based on your needs.
+SenseCraft AI is your intelligent decision-making partner, providing you with simple, flexible and efficient AI
+reasoning and solution building capabilities.
+and solution building capabilities. Using our apps, you will experience the power of intelligent decision making,
+helping you to
+You will experience the power of intelligent decision making to help you make informed and accurate decisions in a
+variety of scenarios.
 
 ## Features
 
@@ -61,6 +67,7 @@ See [here](https://developer.nvidia.com/embedded/jetpack) for upgrade instructio
 ```shell
 bash ./script/edge-ai-setup.sh
 ```
+
 [![NetFlix on UWP](https://res.cloudinary.com/marcomontalbano/image/upload/v1587315555/video_to_markdown/images/youtube--2qqYywttue4-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://youtu.be/2qqYywttue4 "NetFlix on UWP")
 
 Seeed Studio SenseCraft AI Script uses the following items:
