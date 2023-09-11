@@ -8,7 +8,7 @@ SenseCraft AI is a development toolkit and platform designed for NVIDIA Jetson E
 
 ![Alt Text](./docs/video.gif)
 
-In addition to the various built-in AI models we offer out-of-the-box, you will also be able to bring-in your own AI model. In the future, you will have access to a large number of public models on SenseCraft AI platform and you will be able to download and deploy AI models for specific scenarios and create personalized AI solutions based on your needs. SenseCraft AI is your intelligent decision-making partner for vision ai, providing you with simple, flexible and efficient inferencing and solution building capabilities.
+In addition to the various built-in AI models we offer out-of-the-box, in the future, you will have access to a large number of public models on SenseCraft AI platform and you will be able to download and deploy AI models for specific scenarios and create personalized AI solutions based on your needs. SenseCraft AI is your intelligent decision-making partner for vision ai, providing you with simple, flexible and efficient inferencing and solution building capabilities.
 
 ## Features
 
@@ -87,7 +87,7 @@ cat /etc/nv_tegra_release
 
 ## Learning Resources
 
-- [Deploy YOLOv8 on NVIDIA Jetson wusing TensorRT](https://wiki.seeedstudio.com/YOLOv8-TRT-Jetson)
+- [Deploy YOLOv8 on NVIDIA Jetson using TensorRT](https://wiki.seeedstudio.com/YOLOv8-TRT-Jetson)
 - [Deploy YOLOv8 on NVIDIA Jetson using TensorRT and DeepStream SDK Support](https://wiki.seeedstudio.com/YOLOv8-DeepStream-TRT-Jetson)
 
 ## References
