@@ -30,9 +30,9 @@ SenseCraft AI consists of a client and server architecture. The client provides 
 - Internet connectivity via Ethernet/ WiFi
 - Display
 
-## **Sofeware Requirements**
+## **Software Requirements**
 
-- JetPack 5.1.1 (L4T 35.3.1) 
+- JetPack 5.1.2 (L4T 35.4.1) 
 - JetPack 5.1.1 (L4T 35.3.1) 
 - JetPack 5.1 (L4T 35.2.1)
 
@@ -42,8 +42,8 @@ SenseCraft AI consists of a client and server architecture. The client provides 
 
 If you want to quickly experience this application, follow the instructions below.
 
-1.Connect Jetson to a display and power them on
-2.Type the following command on a terminal to run the application
+1. Connect Jetson to a display and power them on
+2. Type the following command on a terminal to run the application
 
 ```sh
 bash ./script/edge-ai-setup.sh
