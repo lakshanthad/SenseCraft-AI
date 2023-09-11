@@ -2,74 +2,80 @@
 
 **Upgrade Any Camera with YOLOv8, Seamlessly and No-code!**
 
+## About
+
+An application suite including an open-source inference server and web UI to deploy any YOLOv8 model to NVIDIA Jetson
+devices and visualize captured streams, with one line of code.
+
 ## Introduction
 
-SenseCraft AI is a powerful artificial intelligence application designed for Jetson devices.
-It supports deployment on a wide range of Jetson devices, ensuring that you have a wide choice of hardware.
-In addition to several built-in AI models, we will be providing a large number of public models on the SenseCraft AI
-platform in the future.
-You can to download and deploy AI models for specific scenarios and create personalized AI solutions based on your
-needs.
-Create personalized AI solutions based on your needs.
-SenseCraft AI is your intelligent decision-making partner, providing you with simple, flexible and efficient AI
-reasoning and solution building capabilities.
-and solution building capabilities. Using our apps, you will experience the power of intelligent decision making,
-helping you to
-You will experience the power of intelligent decision making to help you make informed and accurate decisions in a
-variety of scenarios.
+SenseCraft AI is a development toolkit and platform designed for NVIDIA Jetson Edge AI devices. Simply run the "
+Quickstart Script" and you will be presented with an interactive user interface to view an example application with a
+pre-loaded video and a pre-loaded AI model. If you want to add your own USB camera, IP camera you can simply do it in a
+few clicks!
+(Quick video of demo running - less than 10 seconds)
+In addition to the various built-in AI models we offer out-of-the-box, you will also be able to bring-in your own AI
+model. In the future, you will have access to a large number of public models on SenseCraft AI platform and you will be
+able to download and deploy AI models for specific scenarios and create personalized AI solutions based on your needs.
+SenseCraft AI is your intelligent decision-making partner for vision ai, providing you with simple, flexible and
+efficient inferencing and solution building capabilities.
 
 ## Features
 
-- Easily and conveniently deploy your AI model remotely and return video streams and inference results.
-- Powerful remote management of devices.
-- A user-friendly frontend interface that helps you quickly get started.
-- Flexibility to configure multiple video streams and multiple cameras to meet a variety of visual AI needs, whether at
-  home, in the workplace, or elsewhere.
-- Auto-handling different input sources, such as MP4, IP cameras, and USB cameras.
-- Simple and user-friendly MJPEG streaming output, accessible with just a browser, even on your phone.
+- Easy deployment with one-line of code
+- User-friendly and streamlined user interface to build and visualize AI applications that can be accessible with just a
+  browser
+- Flexibility to configure multiple video streams with multiple camera inputs such as IP and USB cameras
 
-## Project
+## Client and Server Architecture
+
+SenseCraft AI consists of a client and server architecture. The client provides the necessary API endpoints and handles
+the business logic for the frontend application, whereas the server is running on the Jetson device, handling input and
+output, enabling model switching and parameter configurations.
 
 [SenseCraft AI_Client](https://github.com/Seeed-Studio/SenseCraft-AI-webUI)
 
-provides the necessary API endpoints and handles the business logic for the frontend application.
-
 [SenseCraft AI_Server](https://github.com/Seeed-Studio/SenseCraft-AI-Edge)
-
-An YOLO server running on your edge device, handling input and output, enabling model switching and parameter
-configuration.
 
 ## **Hardware Requirements**
 
-Adapts to any Jetson that deploys Jetpack 5.0.2 or higher.
+- NVIDIA Jetson device
+- Internet connectivity via Ethernet/ WiFi
+- Display
 
 ## **Sofeware Requirements**
 
-### Lt4 Version > R35 (Jetpack Version > 5.0.2)
-
-[View L4t Version Detail](https://developer.nvidia.com/embedded/jetson-linux-r351)
-
-Can use "cat /etc/nv_tegra_release" to find Lt4 version
-
-<img src="./docs/img_2.jpg"/>
-
-### **How to reflash Jetpack 5.X**
-
-[ReComputer_J4012_Flash_Jetpack | Seeed Studio Wiki](https://wiki.seeedstudio.com/reComputer_J4012_Flash_Jetpack)
-
-### **Upgrade Jetpack 4.4, 4.5, 4.6 NX devices to Jetpack 5.X**
-
-See [here](https://developer.nvidia.com/embedded/jetpack) for upgrade instructions.
+- JetPack 5.1.1 (L4T 35.3.1) \
+  Note: We have tested and verified this application on a Seeed
+  Studio [reComputer J4012](https://www.seeedstudio.com/reComputer-J4012-w-o-power-adapter-p-5628.html) powered by
+  NVIDIA Jetson Orin NX 16GB module running [JetPack 5.1.1](https://developer.nvidia.com/embedded/jetpack-sdk-511) .
+  However, it will work as long as you have installed the required JetPack version. Furthermore, we will update this in
+  the future to support more JetPack versions as well.
 
 ## **Quickstart**
+
+If you want to quickly experience this application, follow the instructions below.
+1.Connect Jetson to a display and power them on \
+2.Type the following command on a terminal to run the application
 
 ```shell
 bash ./script/edge-ai-setup.sh
 ```
 
-[![NetFlix on UWP](https://res.cloudinary.com/marcomontalbano/image/upload/v1587315555/video_to_markdown/images/youtube--2qqYywttue4-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://youtu.be/2qqYywttue4 "NetFlix on UWP")
+Note: The above command will download and install a Docker container which we have prepared with all the packages and
+dependencies needed to run the application. Please wait patiently because it will take sometime to download the Docker
+container which will be about 28GB.
+
+![Alt Text](./docs/video.gif)
+
+## Next Steps for Developers
+
+If you a developer, we have provided steps on how to build the application locally and run. This will allow developers
+to extend this application and add more features to suit their own requirements. Please follow the below instructions.
 
 ## How to Build
+
+If you want to build this application locally, you can build as follows:
 
 ```shell
 docker build -f ./docker/Dockerfile . -t sensecraft-ai
@@ -77,12 +83,27 @@ docker build -f ./docker/Dockerfile . -t sensecraft-ai
 
 ## How to Run
 
+After buildig locally, you can run the application by:
+
 ```shell
 docker run -d --privileged --restart=always --net=host --ipc=bridge --ipc=host --pid=host --runtime nvidia --gpus all -e DISPLAY=:0 -e EDGEAI_PORT="46654" -e EDGEAI_MODELS_PATH="/var/lib/edge/models" -e EDGEAI_SOURCES_PATH="/var/lib/edge/sources" -e EDGEAI_CONFIGS_PATH="/var/lib/edge/configs" --mount source=edge-gateway-container,target=/var/lib/edge  -v /dev:/dev -v /tmp/.X11-unix/:/tmp/.X11-unix -v /var/run/dbus/system_bus_socket:/var/run/dbus/system_bus_socket --name=sensecraft-ai sensecraft-ai
 ```
 
-Seeed Studio SenseCraft AI uses the following items:
+## Instructions for Flashing JetPack
 
+If you have purchased reComputer J4012, it comes pre-flashed with JetPack 5.1.1. So you do not need to flash again.
+However, if you want to flash reComputer J4012 and other reComputer Jetson Orin based devices, you can
+follow [this wiki](https://wiki.seeedstudio.com/reComputer_J4012_Flash_Jetpack). Furthermore, if you want to reflash
+other Jetson devices, you can visit [this link](https://developer.nvidia.com/embedded/jetpack-archive) to enter the
+JetPack Archieve, select the JetPack version and view the flashing instructions.
+![jetpack](./docs/img_3.png)
+
+After flashing the device, you can verify the L4T version by executing the below command:
+```bash
+cat /etc/nv_tegra_release
+```
+
+## Learning Resources
 - [Ultralytics_YOLOv8](https://github.com/ultralytics/ultralytics)
 - [Watchtower](https://github.com/containrrr/watchtower)
 
