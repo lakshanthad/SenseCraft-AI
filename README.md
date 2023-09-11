@@ -45,7 +45,9 @@ output, enabling model switching and parameter configurations.
 
 ## **Sofeware Requirements**
 
-- JetPack 5.1.1 (L4T 35.3.1) \
+- JetPack 5.1.1 (L4T 35.3.1) 
+- JetPack 5.1.1 (L4T 35.3.1) 
+- JetPack 5.1 (L4T 35.2.1) \
   Note: We have tested and verified this application on a Seeed
   Studio [reComputer J4012](https://www.seeedstudio.com/reComputer-J4012-w-o-power-adapter-p-5628.html) powered by
   NVIDIA Jetson Orin NX 16GB module running [JetPack 5.1.1](https://developer.nvidia.com/embedded/jetpack-sdk-511) .
