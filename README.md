@@ -13,7 +13,6 @@ SenseCraft AI is a development toolkit and platform designed for NVIDIA Jetson E
 Quickstart Script" and you will be presented with an interactive user interface to view an example application with a
 pre-loaded video and a pre-loaded AI model. If you want to add your own USB camera, IP camera you can simply do it in a
 few clicks!
-(Quick video of demo running - less than 10 seconds)
 In addition to the various built-in AI models we offer out-of-the-box, you will also be able to bring-in your own AI
 model. In the future, you will have access to a large number of public models on SenseCraft AI platform and you will be
 able to download and deploy AI models for specific scenarios and create personalized AI solutions based on your needs.
