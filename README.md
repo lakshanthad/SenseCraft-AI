@@ -1,11 +1,11 @@
 # Seeed Studio SenseCraft AI
 
-**No Code Edge AI**
+**Upgrade Any Camera with YOLOv8, Seamlessly and No-code!**
 
 ## Introduction
 
-SenseCraft AI is a powerful artificial intelligence application designed for Recomputer (Jetson) devices.
-It supports deployment on a wide range of Recomputer (Jetson) devices, ensuring that you have a wide choice of hardware.
+SenseCraft AI is a powerful artificial intelligence application designed for Jetson devices.
+It supports deployment on a wide range of Jetson devices, ensuring that you have a wide choice of hardware.
 In addition to several built-in AI models, we will be providing a large number of public models on the SenseCraft AI
 platform in the future.
 You can to download and deploy AI models for specific scenarios and create personalized AI solutions based on your
@@ -69,7 +69,19 @@ bash ./script/edge-ai-setup.sh
 
 [![NetFlix on UWP](https://res.cloudinary.com/marcomontalbano/image/upload/v1587315555/video_to_markdown/images/youtube--2qqYywttue4-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://youtu.be/2qqYywttue4 "NetFlix on UWP")
 
-Seeed Studio SenseCraft AI Script uses the following items:
+## How to Build
+
+```shell
+docker build -f ./docker/Dockerfile . -t sensecraft-ai
+```
+
+## How to Run
+
+```shell
+docker run -d --privileged --restart=always --net=host --ipc=bridge --ipc=host --pid=host --runtime nvidia --gpus all -e DISPLAY=:0 -e EDGEAI_PORT="46654" -e EDGEAI_MODELS_PATH="/var/lib/edge/models" -e EDGEAI_SOURCES_PATH="/var/lib/edge/sources" -e EDGEAI_CONFIGS_PATH="/var/lib/edge/configs" --mount source=edge-gateway-container,target=/var/lib/edge  -v /dev:/dev -v /tmp/.X11-unix/:/tmp/.X11-unix -v /var/run/dbus/system_bus_socket:/var/run/dbus/system_bus_socket --name=sensecraft-ai sensecraft-ai
+```
+
+Seeed Studio SenseCraft AI uses the following items:
 
 - [Ultralytics_YOLOv8](https://github.com/ultralytics/ultralytics)
 - [Watchtower](https://github.com/containrrr/watchtower)
